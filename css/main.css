@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Outfit', sans-serif;
+	color: hsl(24, 5%, 18%);
+	font-size: 16px;
+}
+
+.card {
+	padding: 20px;
+}
+.card__img {
+	width: 100%;
+}
+.card .card-headline {
+	margin: 20px 0;
+	font-family: 'Young Serif', serif;
+	color: hsl(24, 5%, 18%);
+}
+.card__text-p {
+	margin-bottom: 20px;
+	line-height: 22px;
+}
+
+.preparation-time {
+	background-color: hsl(330, 100%, 98%);
+	border-radius: 8px;
+	padding: 20px;
+}
+.preparation-time__headline {
+	color: hsl(332, 51%, 32%);
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.preparation-time__list {
+	list-style: none;
+	margin-left: 20px;
+	line-height: 23px;
+}
+.preparation-time__list span {
+	color: hsl(30, 10%, 34%);
+	font-weight: bold;
+}
+.preparation-time__list-item {
+	margin-bottom: 10px;
+}
+.preparation-time__list-item::before {
+	content: '•';
+	color: hsl(332, 51%, 32%);
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+.ingredients {
+	border-bottom: 1px solid hsl(30, 18%, 87%);
+	padding: 30px 0;
+}
+.ingredients__list {
+	list-style: none;
+	margin-left: 20px;
+	line-height: 23px;
+}
+.ingredients__list-item {
+	position: relative;
+	margin-bottom: 10px;
+}
+.ingredients__list-item::before {
+	content: '•';
+	position: absolute;
+	color: hsl(14, 45%, 36%);
+	display: inline-block;
+	width: 1em;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	margin-left: -1em;
+}
+
+.instructions {
+	border-bottom: 1px solid hsl(30, 18%, 87%);
+	padding: 20px 0;
+}
+.instructions__list {
+	margin-left: 20px;
+	counter-reset: li;
+	line-height: 23px;
+}
+.instructions__list-item {
+	list-style: none;
+	counter-increment: li;
+	margin-bottom: 15px;
+}
+.instructions__list-item::before {
+	content: counter(li) '.';
+	color: hsl(14, 45%, 36%);
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+	font-weight: 600;
+}
+.instructions__list-item span {
+	font-weight: 700;
+	color: hsl(30, 10%, 34%);
+}
+
+.nutrition {
+	padding: 20px 0;
+}
+.nutrition__table {
+	width: 100%;
+	margin: 25px auto;
+	border-collapse: collapse;
+}
+.nutrition__table tr {
+	border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.nutrition__table tr td {
+	padding: 10px 25px;
+	text-align: left;
+}
+.nutrition__table tr td:nth-child(2) {
+	color: hsl(14, 45%, 36%);
+	font-weight: 600;
+}
+
+.title {
+	font-family: 'Young Serif', serif;
+	color: hsl(14, 45%, 36%);
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+@media (min-width: 1440px) {
+	body {
+		padding: 750px;
+		background-color: hsl(30, 54%, 90%);
+	}
+	.card {
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: #fff;
+	}
+}
