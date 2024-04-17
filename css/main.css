@@ -135,12 +135,19 @@ body {
 	margin-bottom: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
 	body {
-		padding: 750px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100vh;
+		/* width: 10px;
+		padding: 750px; */
 		background-color: hsl(30, 54%, 90%);
 	}
 	.card {
+		width: 650px;
 		border-radius: 8px;
 		overflow: hidden;
 		background-color: #fff;
